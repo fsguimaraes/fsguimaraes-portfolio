@@ -12,13 +12,15 @@ body {
     font-style: normal;
     font-variation-settings: "wdth" 100;
     background-color: #080808;
-    height: 256vh;
-    background: linear-gradient(to bottom, #080808, #161616, #242424);
+    height: 342vh;
+    background: linear-gradient(to bottom, #080808, #202020, #323232);
 }
+
 .interface{
     max-width: 1280px;
     margin: 0 auto;
 }
+
 .flex{
     display: flex;
 }
@@ -72,9 +74,9 @@ h2.titulo span{
 header {
     padding: 40px 5%;
     background-color: #080808; /* Caso precise garantir */
-    box-shadow: 0 16px 8px rgba(0, 0, 0, 0.1); /* Sombra para baixo */
+    box-shadow: 0 16px 8px rgba(197, 197, 197, 0.1); /* Sombra para baixo */
     position: relative; /* Necessário para z-index funcionar */
-    z-index: 10; /* Garante que fique acima das outras seções */
+    z-index: 1; /* Garante que fique acima das outras seções */
 }
 
 header>.interface{
@@ -116,11 +118,19 @@ header nav ul li{
     background-color: #494949;
     padding: 256px 8px;
     margin-top: 24px;
+    box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
+    position: relative;
+    z-index: 1;
 }
+
 section.topo-do-site {
-    padding: 64px 5%;
+    padding: 200px 5%;
     background-color: #ffffff;
+    height: 800px;
     color: #080808;
+        box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
+    position: relative;
+    z-index: 1;
 }
 
 section.topo-do-site .flex {
@@ -198,7 +208,11 @@ h1 .ponto_destaque {
 /*ESTILO DAS ESPECIALIDADES*/
 .especialidades{
     padding: 64px 5%;
+    box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
+    position: relative;
+    z-index: 1;
 }
+
 .especialidades .flex {
     display: flex;
     flex-wrap: wrap;
@@ -252,9 +266,10 @@ h1 .ponto_destaque {
 .portfolio {
     padding: 64px 5%;
     background-color: #fff;
-    box-shadow: 0 0 40px 10px #ffffff1d; 
+    box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
+    position: relative;
+    z-index: 1;
 }
-
 .portfolio .titulo {
     color: #080808;
 }
@@ -320,6 +335,9 @@ h1 .ponto_destaque {
     padding: 128px 5%;
     background-color: #111;
     color: #fff;
+    box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
+    position: relative;
+    z-index: 1;
 }
 
 .sobre .titulo {
@@ -485,122 +503,59 @@ form .btn-enviar input:hover{
     transition: all 0.3s;
 }   
 
-/* RESPONSIVIDADE PARA TELAS MENORES (≤768px) */
+/*ESTILO RODAPÉ*/
 
-@media (max-width: 768px)
-{
-    /* GERAL */
-    body {
-        height: auto;
-    }
-
-    .interface {
-        padding: 0 16px;
-    }
-
-    .flex {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h2.titulo,
-    h2.titulo span,
-    .portfolio .titulo,
-    .portfolio .titulo span,
-    .sobre .titulo,
-    .sobre .titulo span {
-        font-size: 32px;
-    }
-
-    /* HEADER */
-    header {
-        padding: 24px 5%;
-    }
-
-    header nav ul li {
-        padding: 0 16px;
-    }
-
-    .btn-contato button {
-        padding: 10px 24px;
-        font-size: 16px;
-    }
-
-    /* TOPO DO SITE */
-
-    section.topo-do-site {
-        padding: 48px 5%;
-        text-align: center;
-    }
-
-    .txt_topo_site {
-        max-width: 100%;
-    }
-
-    .topo-do-site h1 {
-        font-size: 36px;
-        line-height: 44px;
-    }
-
-    h1 .destaque {
-        font-size:  36px;
-        line-height: 44px;
-    }
-    .topo-do-site p {
-        font-size: 18px;
-    }
-
-    .topo-do-site .img-topo-site img {
-        max-width: 300px;
-    }
-
-    /* ESPECIALIDADES */
-    .especialidades-box {
-        flex: 1 1 100%;
-        padding: 12px;
-    }
-
-    /* portfolio */
-    .portfolio .flex {
-        justify-content: center;
-    }
-
-    .portfolio .img-port {
-        width: 90%;
-        height: auto;
-        padding: 30px 0;
-    }
-
-    .portfolio .img-port img {
-        max-height: 200px;
-        object-fit: cover;
-    }
-
-    /* SOBRE */
-    .sobre .flex {
-        gap: 48px;
-    }
-
-    .sobre .txt-sobre h3,
-    .meu_nome {
-        font-size: 28px;
-        line-height: 36px;
-    }
-
-    .sobre .txt-sobre p {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .img-sobre img {
-        width: 80%;
-    }
-
-    .sobre .btn-social button{
-        width: 32px;
-        height: 32px;
-        align-items: center;
-        justify-content: space-between;
-
+footer {
+    padding: 54px 5%;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    text-align: center;
+    justify-content: space-around;
+    box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
+    position: relative;
+    z-index: 1;
 }
+
+
+footer .logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 12px;
+}
+
+footer .logo-footer img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+footer .logo-footer h2 {
+    font-size: 12px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+/*RESPONSIVIDADE < 1024px*/
+@media screen and (max-width: 1024px) {
+
+    /*Classes GERAIS*/
+    .flex{
+        flex-direction: column;
+    }
+
+    h2.titulo{
+        font-family: 32px;
+        line-height: 30px;
+    }
+
+    /*CABEÇALHO*/
+    .menu,.btn-contato{
+        display:none;
+    }
+
+    
 }
