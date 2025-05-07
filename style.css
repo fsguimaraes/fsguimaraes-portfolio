@@ -12,8 +12,8 @@ body {
     font-style: normal;
     font-variation-settings: "wdth" 100;
     background-color: #080808;
-    height: 228vh;
-    background: linear-gradient(to bottom, #080808, #202020, #363636);
+    height: 256vh;
+    background: linear-gradient(to bottom, #080808, #161616, #242424);
 }
 .interface{
     max-width: 1280px;
@@ -213,7 +213,7 @@ h1 .ponto_destaque {
     padding: 40px;
     border: 2px solid #68686863;
     margin-top: 42px;
-    border-radius: 24px;
+    border-radius: 32px;
     box-sizing: border-box;
     transition: all 0.4s ease-in-out;
 }
@@ -247,79 +247,77 @@ h1 .ponto_destaque {
     transition: color 0.4s ease-in-out;
 }
 
-/*ESTILO MEUS portfolio*/
+/* ESTILO MEU PORTFÓLIO */
 
 .portfolio {
-    padding: 64x 5%; /* remove o padding lateral */
-    background-color: #ffffff;  
-    padding-bottom: 64px;  /* Aumente ou diminua conforme necessário */
-    color: #0e0e0e;
-    margin-top: 128px;
-    width: 100vw; /* força a largura da viewport inteira */
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    box-shadow: 0 8px 8px rgba(53, 53, 53, 0.63); /* Sombra para baixo */
-    position: relative; /* Necessário para z-index funcionar */
-    z-index: 10; /* Garante que fique acima das outras seções */
+    padding: 64px 5%;
+    background-color: #fff;
+    box-shadow: 0 0 40px 10px #ffffff1d; 
 }
 
 .portfolio .titulo {
-    padding: 64px 5%;
-    font-size: 40px;
-    color: #222;
-    text-align: center;
-    margin-bottom: 42px;
-    font-weight: bold;
+    color: #080808;
 }
 
 .portfolio .titulo span {
-    color: #00bfff; /* destaque igual ao de "ESPECIALIDADES" */
-    font-size: 40px;
+    color: #00bfff; 
+}
+
+.portfolio a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
 }
 
 .portfolio .flex {
-    padding: 64px 5%;
+    margin-top: 64px;
     display: flex;
     justify-content: space-around;
-    gap: 10px; /* Diminuído de 20px para 10px para menor largura entre os elementos */
+    gap: 32px;
     flex-wrap: wrap;
 }
 
 .portfolio .img-port {
-    width: 296px;
-    background-color: #ffffff;
-    padding: 48px 0;  /* Padding igual ao título, mas com 48px na parte inferior */
-    border-radius: 24px;
-    text-align: center;
-    transition: all 0.25 ease-in-out;
-    box-shadow: 0 0 8px rgba(0, 191, 255, 0.1);
-    height: 396px; /* Aumentando a altura para tornar os itens mais compridos */
-}
-
-.portfolio .img-port img {
-    width: 100%;
-    border-radius: 24px;
-    margin-bottom: 16px;
-}
-
-.portfolio .img-port p {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #242424;
+    width: 396px;
+    height: 600px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 6s;
+    cursor: pointer;
+    border-radius: 32px;
+    position: relative;
 }
 
 .portfolio .img-port:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(48, 48, 48, 0.3);
+    background-position: 100% 100%;
+
+}
+
+.portfolio .overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #252525c2;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 512;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.overlay:hover{
+    opacity: 1;
 }
 
 /* --- SOBRE MIM --- */
 
 .sobre {
-    padding: 196px 5%;
+    padding: 128px 5%;
     background-color: #111;
     color: #fff;
 }
@@ -327,7 +325,7 @@ h1 .ponto_destaque {
 .sobre .titulo {
     font-size: 40px;
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 128px;
     font-weight: bold;
 }
 
@@ -337,6 +335,7 @@ h1 .ponto_destaque {
 }
 
 .sobre .flex {
+    margin-top: 64px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -349,14 +348,14 @@ h1 .ponto_destaque {
 }
 
 .sobre .txt-sobre h3 {
-    font-size: 42px;
+    font-size: 48px;
     margin-bottom: 32px;
     color: #00bfff;
-    line-height: 42px;
+    line-height: 50px;
 }
 
 .meu_nome {
-    font-size: 42px;
+    font-size: 48px;
     color: #ffffff;
     display: block;
 }
@@ -386,20 +385,6 @@ h1 .ponto_destaque {
     cursor: pointer;
 }
 
-.sobre .flex {
-    display: flex;
-    align-items: center;
-    gap: 128px;
-    flex-wrap: wrap;
-}
-
-.img-sobre img {
-    width: 250px;
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
 .txt-sobre {
     flex: 1;
 }
@@ -424,6 +409,82 @@ h1 .ponto_destaque {
     cursor: pointer;
     transition: all 0.25 ease-in-out;
 }
+
+/*ESTILO FORMULÁRIO DE CONTATO*/
+
+section.formulario{
+    background-color: #ffffff;
+    padding: 64px 5%;
+    margin-bottom: 48px 0;
+}
+.formulario .titulo {
+    color: #080808;
+    margin-bottom: 48px;
+}
+form{
+    max-width: 426px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form input{
+    width: 100%;
+    background-color: #eeeeeeea;
+    border: 0;
+    border-color: #dadadaa2;
+    outline: 2;
+    outline-color: #00bfff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+form input::placeholder{
+    color: #969696a6;
+}
+form textarea::placeholder{
+    color: #969696a6;
+}
+
+form textarea{
+    resize: none;
+    max-height: 256px;
+    width: 100%;
+    background-color: #eeeeeeea;
+    border: 0;
+    border-color: #dadadaa2;
+    outline: 2;
+    outline-color: #00bfff;
+    padding: 30px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+form .btn-enviar{
+    margin: 12px 0;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    background-color: #00bfff;
+    border-radius: 16px;
+    width: 174px;
+    font-size: 18px;
+    font-weight: 512;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+form .btn-enviar input:hover{
+    transform: scale(1.04);
+    transition: all 0.3s;
+}   
+
 /* RESPONSIVIDADE PARA TELAS MENORES (≤768px) */
 
 @media (max-width: 768px)
