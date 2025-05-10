@@ -1,10 +1,39 @@
 /*ESTILO GERAL*/
+
 *
 {
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* espaço entre a imagem e o texto */
+  }
+  
+  .logo img {
+    width: 50px; /* ajuste conforme o tamanho ideal */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: scale(1.06) rotate(360deg);
+  }
+  
+  .texto-logo {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #ffffff; /* ou a cor que combinar com seu layout */
+  }
+
+  .texto-logo:hover{
+    transform: scale(1.05);
+  }
+
 body {     
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -12,7 +41,7 @@ body {
     font-style: normal;
     font-variation-settings: "wdth" 100;
     background-color: #080808;
-    height: 342vh;
+    height: 320vh;
     background: linear-gradient(to bottom, #080808, #202020, #323232);
 }
 
@@ -128,7 +157,7 @@ section.topo-do-site {
     background-color: #ffffff;
     height: 800px;
     color: #080808;
-        box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
+    box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
     position: relative;
     z-index: 1;
 }
@@ -140,7 +169,7 @@ section.topo-do-site .flex {
 }
 
 .txt_topo_site {
-    max-width: 60%;
+    max-width: 64%;
 }
 
 .topo-do-site h1{
@@ -156,6 +185,7 @@ section.topo-do-site .flex {
 }
 .topo-do-site p{
     margin: 32px 0;
+    max-width: 92%;
     color: #080808;
     font-size:  20px;
     font-family: "Roboto", sans-serif;
@@ -191,7 +221,7 @@ h1 .ponto_destaque {
 .topo-do-site .img-topo-site img {
     position: relative; /* Deixe a imagem com posição relativa */
     width: 100%; /* Ajuste conforme necessário */
-    max-width: 400px; /* Ou um valor fixo se necessário */
+    max-width: 512px; /* Ou um valor fixo se necessário */
     animation: img_flutuante 2s ease-in-out infinite alternate;
 }
 
@@ -221,11 +251,11 @@ h1 .ponto_destaque {
 }
 
 .especialidades-box {
-    flex: 1 1 calc(25% - 18px); /* 4 por linha com gap */
+    flex: 1 1 calc(25% - 20px); /* 4 por linha com gap */
     background-color: transparent;
     color: #ffffff;
     padding: 40px;
-    border: 2px solid #68686863;
+    border: 2px solid #ffffff;
     margin-top: 42px;
     border-radius: 32px;
     box-sizing: border-box;
@@ -238,18 +268,19 @@ h1 .ponto_destaque {
     }
 }
 .especialidades-box i {
-    font-size: 40px;
+    font-size: 42px;
     color: #ffffff; /* Cor dos ícones */
 }
 .especialidades-box h3{
     font-size: 20px;
+    font-weight: 700;
     color: #ffffff;
-    margin: 20px 0;
+    margin: 26px 0;
 }
 .especialidades-box:hover {
     background-color: #ffffff;
     color: #080808;
-    transform: scale(1.02);
+    transform: scale(1.05);
     box-shadow: #303030d7;
     transition: all 0.4s ease-in-out;
 }
@@ -261,7 +292,7 @@ h1 .ponto_destaque {
     transition: color 0.4s ease-in-out;
 }
 
-/* ESTILO MEU PORTFÓLIO */
+/* ESTILO PORTFÓLIO*/
 
 .portfolio {
     padding: 64px 5%;
@@ -269,66 +300,125 @@ h1 .ponto_destaque {
     box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
     position: relative;
     z-index: 1;
+    text-align: center; /* Para centralizar o título */
 }
+
 .portfolio .titulo {
     color: #080808;
+    margin-bottom: 32px;
 }
 
 .portfolio .titulo span {
-    color: #00bfff; 
+    color: #00bfff;
 }
 
 .portfolio a {
     text-decoration: none;
     color: inherit;
-    display: inline-block;
+    display: flex;
 }
 
-.portfolio .flex {
-    margin-top: 64px;
+.portfolio-carrossel {
     display: flex;
-    justify-content: space-around;
-    gap: 32px;
-    flex-wrap: wrap;
+    justify-content: center; /* Centraliza todo o carrossel */
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
+
+.carrossel-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1280px; /* Limita largura para evitar distorções */
+    box-sizing: border-box;
+}
+
+.carrossel-track {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 48px 0;
+    transition: transform 0.5s ease-in-out; /* Animação suavizada */
+    will-change: transform; /* Melhora desempenho em navegadores modernos */
+}
+
+/* Ajuste na imagem do portfólio */
 
 .portfolio .img-port {
-    width: 396px;
+    flex: 0 0 300px;
+
     height: 600px;
+    object-fit: cover; /* Mantém proporção sem distorção */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     background-size: cover;
     background-position: 100% 0%;
-    transition: 6s;
+    transition: transform 0.3s ease, background-position 0.3s ease, opacity 0.3s ease; /* transições mais suaves */
     cursor: pointer;
     border-radius: 32px;
     position: relative;
+    opacity: 0.5; /* levemente transparente */
 }
 
 .portfolio .img-port:hover {
     background-position: 100% 100%;
-
+    transform: translateY(-10px); /* efeito de flutuar */
+    opacity: 1; /* remove a transparência no hover */
 }
 
+
+/* Ajuste no estilo da sobreposição */
 .portfolio .overlay {
     position: absolute;
     top: 0%;
     left: 0%;
     width: 100%;
     height: 100%;
-    background-color: #252525c2;
+    background-color: #25252538;
     border-radius: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 28px;
-    font-weight: 512;
-    color: #fff;
-    opacity: 0;
-    transition: all 0.5s;
+    font-weight: 500;
+    color: #ffffff;
+    transition: opacity 0.3s ease; /* apenas transição de opacidade */
 }
-.overlay:hover{
+
+.img-port:hover .overlay {
     opacity: 1;
 }
 
+/* Estilo dos botões de navegação */
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 108px; /* Ajustei o tamanho das setas */
+    font-weight: 200;
+    cursor: pointer;
+    padding: 20px;
+    color: #00bfff;
+    transition: transform 0.2s;
+    position: absolute;
+    top: 36%; /* Alinhamento vertical no centro */
+    transform: translateY(-5%) scale(1.10); /* Ajuste na escala */
+}
+
+.nav-button:hover {
+    transform: scale(1.06);
+}
+
+.nav-button.left {
+    left: 32px;
+}
+
+.nav-button.right {
+    right: 32px;
+}
 /* --- SOBRE MIM --- */
 
 .sobre {
@@ -506,56 +596,98 @@ form .btn-enviar input:hover{
 /*ESTILO RODAPÉ*/
 
 footer {
-    padding: 54px 5%;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 12px;
-    text-align: center;
-    justify-content: space-around;
-    box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
-    position: relative;
-    z-index: 1;
+  padding: 48px 5%;
+  background: linear-gradient(to bottom, #0e0e0e, #202020);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  text-align: center;
+  box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
+  position: relative;
+  z-index: 1;
 }
-
 
 footer .logo-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
-footer .logo-footer img {
-    max-width: 120px;
-    height: auto;
-    margin-bottom: 24px;
+footer .logo-texto {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+footer .logo-texto img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+footer .logo-texto img:hover {
+  transform: rotate(360deg) scale(1.04);
+}
+
+footer .texto-logo {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  color: #ffffff;
 }
 
 footer .logo-footer h2 {
-    font-size: 12px;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center; /* Garantir alinhamento central para os direitos autorais */
 }
+footer .logo-footer h2:hover{
+    transform: scale(1.04);
+}
+    
+/*RESPONSIVIDADE*/
 
+@media screen and (max-width:1024px){
 
-
-/*RESPONSIVIDADE < 1024px*/
-@media screen and (max-width: 1024px) {
-
-    /*Classes GERAIS*/
+    /*CLASSES GERAIS*/
     .flex{
         flex-direction: column;
+        padding: 48px;
     }
-
-    h2.titulo{
-        font-family: 32px;
+    .titulo h2, .titulo h2 span{
+        font-size: 32px;
         line-height: 30px;
     }
 
-    /*CABEÇALHO*/
-    .menu,.btn-contato{
-        display:none;
+    .txt_topo_site h1, .txt_topo_site .destaque, .txt_topo_site .ponto_destaque{
+        font-size: 32px;
+        line-height: 30px;
+        text-align: left;
+    }
+    .txt_topo_site p{
+        font-size: 16px;
+        line-height: 16px;
+        text-align: justify;
     }
 
-    
+    /*CABEÇALHO*/
+    .menu,
+    .btn-contato{
+        display: none;
+    }
+    /*TOPO DO SITE*/
+    .topo-do-site .flex{
+        gap: 20px;
+    }
+    .topo-do-site{
+        padding: 20px 10%;
+    }
+
+    .topo-do-site h1{
+        font-size: 32px;
+    }
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
 }
+
