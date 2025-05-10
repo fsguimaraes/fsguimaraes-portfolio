@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+      
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,42 +17,38 @@
         
         <!-- Seu CSS -->
         <link rel="stylesheet" href="style.css">
+            <!-- Rolagem suave -->
+        <style>
+            html {
+            scroll-behavior: smooth;
+             }
+    </style>
     
-        <title>Projeto Guimarães</title>
+        <title>Guima Data Hub</title>
 </head>
 <body>
     <header id="topo">
         <div class="interface">
             <div class="logo">
-                <a href="#">
-                    <img src="guima_data_hub.png" alt="Minha logo Guima Hub Data">
-                </a>
-            </div><!--logo-->
+                <img src="novo_logo_gdh_circulo.png" alt="Minha logo Guima Hub Data">
+                    <span class="texto-logo">GDH</span>
+              </div>
                 <nav class="menu">
                     <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Especialidades</a></li>
-                        <li><a href="#">Portfólio</a></li>
-                        <!--<li><a href="#">Certificados</a></li><!-->
-                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
                     </ul>
                 </nav>
-                    <div class="btn-contato">
-                        <!--GOOGLE FONTES-->
-                            <link rel="preconnect" href="https://fonts.googleapis.com">
-                            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-                            <!--fim GOOGLE FONTES-->
-                        <a href="###">
-                            <button>Contato</button>
-
-                        </a>
+                    <div class="btn-contato" id="#formulario">
+                        <a href="#formulario"><button>Contato</button></a>
                     </div><!--Botão Contato-->
         </div><!--Fim interface-->
 
     </header>
     <main>
-        <section class="topo-do-site">
+        <section class="topo-do-site" id="inicio">
             <div class="interface">
                 <div class="flex">
         
@@ -62,12 +58,12 @@
                         decisões e dar vida aos números. Cada visualização é pensada para ser clara, impactante e útil,
                         conectando dados brutos a insights estratégicos.</p>
                         <div class="btn-contato">
-                            <a href="#"><button>Entre em contato</button></a>
+                            <a href="#formulario"><button>Entre em contato</button></a>
                         </div>
                     </div>
         
                     <div class="img-topo-site">
-                        <img src="foto_nova_mold_1.png" alt="Fellipe Guimarães">
+                        <img src="analise_foto_pag_inicial.png" alt="Analisando dados">
                     </div>
         
                 </div><!-- fecha flex -->
@@ -75,7 +71,7 @@
         </section>
 
 <!--ESPECIALIDADES -->
-        <section class="especialidades">
+        <section class="especialidades" id="especialidades">
             <div class="interface">
                 <h2 class="titulo">MINHAS <span>ESPECIALIDADES</span></h2>
                 <div class="flex">
@@ -83,20 +79,18 @@
                     <!--EXCEL, GOOGLE SHEETS-->
                     <div class="especialidades-box">
                         <i class="bi bi-file-earmark-spreadsheet"></i>
-                        <h3>Planilhas Eletrônicas</h3>
-                        <p>Possuo sólida experiência na criação e automação de planilhas utilizando Microsoft Excel e Google Sheets,
-                        com foco em análise de dados, controle operacional e suporte à tomada de decisões. Domino fórmulas avançadas,
-                        tabelas dinâmicas, validações de dados, gráficos interativos e dashboards personalizados. Utilizo macros (VBA)
-                         no Excel e Apps Script no Google Sheets para otimizar tarefas repetitivas, garantindo eficiência e agilidade 
-                         em processos. Além disso, integro dados com outras ferramentas e desenvolvo soluções colaborativas que ampliam 
-                         a visibilidade e a produtividade das operações.
+                        <h3>Excel</h3>
+                        <p>Tenho ampla experiência na criação e automação de planilhas no Microsoft Excel, focando em transformar dados em insights estratégicos
+                             e otimizar operações. Sou expert em fórmulas avançadas como PROCV, tabelas dinâmicas, gráficos interativos e dashboards personalizados,
+                              utilizando ferramentas poderosas para integrar dados e agilizar processos, proporcionando soluções que impulsionam a produtividade e 
+                              a tomada de decisões inteligentes com Excel
                         </p>
                     </div>
 
                     <!--POWER BI, GOOGLE LOOKER STUDIO-->
                     <div class="especialidades-box">
                         <i class="bi bi-bar-chart-line"></i>
-                         <h3>Análise de Dados</h3>
+                         <h3>Power BI e Google Looker Studio</h3>
                          <p>Experiência na criação de dashboards interativos e relatórios dinâmicos que transformam dados em insights estratégicos.
                             Domínio em modelagem de dados, DAX, filtros avançados e visualizações personalizadas no Power BI.
                             No Looker Studio, atuo com conectores, métricas personalizadas e storytelling visual para facilitar a tomada de decisões em tempo real.
@@ -106,8 +100,8 @@
                     <!--BANCO DE DADOS, SQL, MONGODB-->
                     <div class="especialidades-box">
                          <i class="bi bi-database"></i>
-                         <h3>Banco de Dados</h3> 
-                         <p>Experiência sólida na modelagem, consulta e otimização de dados com SQL em ambientes relacionais como MySQL, SQL Server e PostgreSQL. 
+                         <h3>Banco de Dados - SQL</h3> 
+                         <p>Experiência sólida na modelagem, consulta e otimização de dados com SQL em ambientes relacionais com SQL. 
                             Criação de rotinas, procedures e integrações para suporte analítico e operacional. Conhecimento introdutório em MongoDB,
                              com foco na estruturação de dados não relacionais, consultas básicas e aplicação em projetos orientados a documentos.
                          </p> 
@@ -115,10 +109,10 @@
                     <!--CLOUD AWS-->
                     <div class="especialidades-box">
                          <i class="bi bi-cloud-check"></i>
-                         <h3>Nuvem</h3>
-                         <p>Experiência no uso de serviços AWS para implantação, automação e gerenciamento de ambientes escaláveis e seguros.
-                             Domínio em serviços como EC2, S3, RDS, Lambda e CloudWatch, com foco em performance, disponibilidade e custo-benefício. 
-                             Atuação em projetos de migração, integração de dados e arquitetura em nuvem para suportar operações ágeis e orientadas por dados.
+                         <h3>AWS Cloud</h3>
+                         <p>Tenho conhecimento fundamental no uso de serviços AWS para implantação, automação e gerenciamento de ambientes escaláveis e seguros.
+                             Tenho familiaridade com serviços como EC2, S3, RDS, Lambda e CloudWatch, focando na otimização de performance, disponibilidade e custo-benefício.
+                              Participei de projetos de migração, integração de dados e arquitetura em nuvem, sempre com o objetivo de apoiar operações ágeis e orientadas por dados.
                          </p>
                                             
 
@@ -128,50 +122,96 @@
         </section><!--FIM ESPECIALIDADES--> 
 
 <!--MEU PORTIFOLIO -->      
+  
+<section class="portfolio" id="portfolio">
+    <h2 class="titulo">MEU <span>PORTFÓLIO</span></h2>
 
-        <section class="portfolio">
-            <div class="interface">
-                <h2 class="titulo">MEU <span>PORTFÓLIO</span></h2>
-                    <div class="flex">
+    <div class="portfolio-carrossel">
+        <div class="carrossel-wrapper">
+            <div class="carrossel-track" id="carrosselTrack">
 
-                        <!-- PROJETO 1 -->
-                        <a href="https://app.powerbi.com/reportEmbed?reportId=34338f53-50e8-4382-969b-0df5fb2d011d&autoAuth=true&ctid=f310b526-e195-4805-a55e-67e28f2fefdb" target="_blank">
-                            <div class="img-port" style="background-image: url('pagina_vertical_projetopowerbi.png');">
-                                <div class="overlay">Projeto 1</div>
-                            </div>
-                        </a>
+        <!-- PROJETO 1 -->
+        <a href="https://app.powerbi.com/reportEmbed?reportId=34338f53-50e8-4382-969b-0df5fb2d011d&autoAuth=true&ctid=f310b526-e195-4805-a55e-67e28f2fefdb" target="_blank">
+            <div class="img-port" style="background-image: url('pagina_vertical_projetopowerbi.png');">
+              <div class="overlay">Projeto 1<br>Data Toys</br></div>
+            </div>
+        </a>  
+          
+        <!-- PROJETO 2 -->
+        <a href="link_aqui" target="_blank">
+            <div class="img-port" style="background-image: url('projeto_em_andamento.png');">
+                <div class="overlay">Projeto 2<br>Em breve</br></div>
+            </div>
+        </a> 
 
-                        <!-- PROJETO 2 -->
-                         <!--
-                        <a href="https://app.powerbi.com/reportEmbed?reportId=34338f53-50e8-4382-969b-0df5fb2d011d&autoAuth=true&ctid=f310b526-e195-4805-a55e-67e28f2fefdb" target="_blank">-->
-                            <div class="img-port" style="background-image: url(projeto_em_andamento.png);">
-                                <div class="overlay">Projeto 2 - Em breve</div>
-                            </div>
-                        </a>
+        <!-- PROJETO 3 -->
+        <a href="link_aqui" target="_blank">
+          <div class="img-port" style="background-image: url('projeto_em_andamento.png');">
+            <div class="overlay">Projeto 3<br>Em breve</br></div>
+          </div>
+        </a>
 
-                        <!-- PROJETO 3 -->
-                         <!--
-                        <a href="https://app.powerbi.com/reportEmbed?reportId=34338f53-50e8-4382-969b-0df5fb2d011d&autoAuth=true&ctid=f310b526-e195-4805-a55e-67e28f2fefdb" target="_blank">-->
-                            <div class="img-port" style="background-image: url(projeto_em_andamento.png);">
-                                <div class="overlay">Projeto 3 - Em breve</div>
-                            </div>
-                        </a>
+        <!-- PROJETO 4 -->
+        <a href="link_aqui" target="_blank">
+          <div class="img-port" style="background-image: url('projeto_em_andamento.png');">
+            <div class="overlay">Projeto 4<br>Em breve</br></div>
+          </div>
+          </a>
 
-                        
+        <!-- PROJETO 5 -->
+        <a href="link_aqui" target="_blank">
+          <div class="img-port" style="background-image: url('projeto_em_andamento.png');">
+            <div class="overlay">Projeto 5<br>Em breve</br></div>
+          </div>
+        </a>
 
-                        <!--
-                        <a href="https://app.powerbi.com/reportEmbed?reportId=34338f53-50e8-4382-969b-0df5fb2d011d&autoAuth=true&ctid=f310b526-e195-4805-a55e-67e28f2fefdb" target="_blank">
-                        -->
+        <!-- PROJETO 6 -->
+        <a href="link_aqui" target="_blank">
+            <div class="img-port" style="background-image: url('projeto_em_andamento.png');">
+            <div class="overlay">Projeto 6<br>Em breve</br></div>
+            </div>
+        </a>  
 
+        <!-- PROJETO 7 -->
+        <a href="link_aqui" target="_blank">
+            <div class="img-port" style="background-image: url('projeto_em_andamento.png');">
+            <div class="overlay">Projeto 7<br>Em breve</br></div>
+            </div>
+        </a>  
 
-                    
-                    </div>
-                
-            </div><!--FIM INTERFACE PORTFÓLIO-->
-        </section><!--FIM MEU PORTFÓLIO-->
+        <!-- PROJETO 8 -->
+        <a href="link_aqui" target="_blank">  
+          <div class="img-port" style="background-image: url('projeto_em_andamento.png');">
+            <div class="overlay">Projeto 8<br>Em breve</br></div>
+            </div>
+        </a>
 
+        <!-- PROJETO 9 -->
+        <a href="link_aqui" target="_blank">
+          <div class="img-port" style="background-image: url('projeto_em_andamento.png');">
+            <div class="overlay">Projeto 9<br>Em breve</br></div>
+            </div>
+        </a>
+
+        <!-- PROJETO 10 -->
+        <a href="link_aqui" target="_blank">
+            <div class="img-port" style="background-image: url('projeto_em_andamento.png');">
+                <div class="overlay">Projeto 10<br>Em breve</br></div>
+            </div>
+        </a>    
+
+          <!-- ... outros projetos ... -->
+  
+        </div>
+    </div>
+
+    <!-- Botões de navegação -->
+    <button class="nav-button left" onclick="scrollPortfolioLeft()">&#x276E;</button>
+    <button class="nav-button right" onclick="scrollPortfolioRight()">&#x276F;</button>
+</div>
+</section>
 <!--SESSÃO SOBRE MIM -->
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <div class="interface">
                 <!--<h2 class="titulo">SOBRE <span>MIM</span></h2><!-->
                 <div class="flex">
@@ -183,7 +223,7 @@
         
                     <!-- TEXTO À DIREITA -->
                     <div class="txt-sobre">
-                        <h3>Muito prazer, <span class="meu_nome">sou Fellipe Guimarães.</span></h3>
+                        <h3>MUITO PRAZER, <span class="meu_nome">FELLIPE GUIMARÃES.</span></h3>
                         <p>Sou um profissional com mais de 8 anos de experiência em logística, atualmente em transição para a área de dados. 
                         Utilizo minha bagagem analítica e operacional para construir soluções baseadas em dados que otimizam processos e aumentam a eficiência. 
                         Domino ferramentas como Excel, Power BI, SQL e Google Looker Studio, e estou em constante evolução com Python e Cloud AWS. 
@@ -229,7 +269,7 @@
 <!--FORMULÁRIO-->
         
 
-        <section class="formulario">
+        <section class="formulario" id="formulario">
                 <div class="interface">
                     <h2 class="titulo">FALE <span>COMIGO</span></h2>
                         <form action="">
@@ -248,14 +288,21 @@
 <!--RODAPÉ-->
 <footer>
     <div class="interface">
-        <div class="line-footer">
-            <div class="logo-footer">
-                <a href="#topo">
-                    <img src="guima_data_hub.png" alt="Guima Data Hub" class="src">
-                </a>
-                <h2>guimadatahub.com | Copyright © 2025 Fellipe Guimarães.</h2>
-                <h2>Todos os direitos reservados</h2>
-            </div>
+      <div class="line-footer">
+        <div class="logo-footer">
+          <div class="logo-texto">
+            <img src="novo_logo_gdh_circulo.png" alt="Guima Data Hub" class="src">
+            <span class="texto-logo">GDH</span>
+            <h2>www.guimadatahub.com</h2>
+            <h2>© 2025 Fellipe Guimarães</h2>
+            <h2>Todos os direitos reservados</h2>
+          </div>
         </div>
-    </div><!--FIM INTERFACE RODAPÉ-->
-</footer><!--FIM RODAPÉ-->
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JAVASCRIPT DO CARROSSEL -->
+  <script src="carrossel_portfolio.js"></script>
+</body>
+</html>
