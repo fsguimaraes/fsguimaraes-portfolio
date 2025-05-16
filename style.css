@@ -41,7 +41,7 @@ body {
     font-style: normal;
     font-variation-settings: "wdth" 100;
     background-color: #080808;
-    height: 320vh;
+    height: 300vh;
     background: linear-gradient(to bottom, #080808, #202020, #323232);
 }
 
@@ -644,6 +644,13 @@ footer .logo-footer h2 {
 footer .logo-footer h2:hover{
     transform: scale(1.04);
 }
+
+footer .contador_visitas{
+    display: flex;
+    background-color: #202020;
+    color: #00bfff;
+    font-family:"Roboto, sans-serif";
+}
     
 /*RESPONSIVIDADE*/
 
@@ -690,4 +697,3 @@ footer .logo-footer h2:hover{
         width: 100%;
     }
 }
-
